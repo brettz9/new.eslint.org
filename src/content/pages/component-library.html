@@ -12,100 +12,110 @@ tags: ['nav']
 {%- from 'components/rule.macro.html' import rule %}
 
 
-<div class="content-container">
-    {{ buttonyLink({ type: "primary", text: "Primary Button", url:"/" }) }}
-    {{ buttonyLink({ type: "secondary", text: "Secondary Button", url:"/" }) }}
-    {{ buttonyLink({ type: "ghost", text: "Ghost Button", url:"/" }) }}
+<div class="content-container grid">
+    <div class="span-1-6">
+        TODO: Some words about the buttons
+    </div>
+    <div class="span-7-12">
+        {{ buttonyLink({ type: "primary", text: "Primary Button", url:"/" }) }}
+        {{ buttonyLink({ type: "secondary", text: "Secondary Button", url:"/" }) }}
+        {{ buttonyLink({ type: "ghost", text: "Ghost Button", url:"/" }) }}
+    </div>
 </div>
 
 
-<div class="content-container">
-    {{ warning({
-        text: "This rule was removed in version 7.1.2.",
-        url: "/"
-    }) }}
-
-    {{ tip({
-        text: "This rule is deprecated and will be removed in future versions.",
-        url: "/"
-    }) }}
-
-    {{ important({
-        text: "Remember to share your changes with the team.",
-        url: "/"
-    }) }}
+<div class="content-container grid">
+    <div class="span-7-12">
+        {{ warning({
+            text: "This rule was removed in version 7.1.2.",
+            url: "/"
+        }) }}
+        {{ tip({
+            text: "This rule is deprecated and will be removed in future versions.",
+            url: "/"
+        }) }}
+        {{ important({
+            text: "Remember to share your changes with the team.",
+            url: "/"
+        }) }}
+    </div>
 </div>
 
-<div class="content-container">
-    {{ ruleCategories({
-        extends: true,
-        fix: true,
-        suggestions: true
-    }) }}
-
-    <br>
-    <br>
-
-    {{ extends() }}
-    {{ fix() }}
-    {{ suggestions() }}
-</div>
-
-<div class="content-container">
-    {{ rule({
-        name: "getter-return",
-        deprecated: true,
-        description: 'Enforce `return` statements in getters.',
-        categories: {
+<div class="content-container grid">
+    <div class="span-7-12">
+        {{ ruleCategories({
             extends: true,
             fix: true,
-            suggestions: false
-        }
-    }) }}
-
-    {{ rule({
-        name: "getter-return",
-        deprecated: false,
-        description: 'Enforce `return` statements in getters.',
-        categories: {
-            extends: true,
-            fix: false,
-            suggestions: false
-        }
-    }) }}
+            suggestions: true
+        }) }}
+        <br>
+        <br>
+        {{ extends() }}
+        {{ fix() }}
+        {{ suggestions() }}
+    </div>
 </div>
 
-<div class="content-container">
-    {% include 'partials/branding-logo.html' %}
+<div class="content-container grid">
+    <div class="span-7-12">
+        {{ rule({
+            name: "getter-return",
+            deprecated: true,
+            description: 'Enforce `return` statements in getters.',
+            categories: {
+                extends: true,
+                fix: true,
+                suggestions: false
+            }
+        }) }}
+        {{ rule({
+            name: "getter-return",
+            deprecated: false,
+            description: 'Enforce `return` statements in getters.',
+            categories: {
+                extends: true,
+                fix: false,
+                suggestions: false
+            }
+        }) }}
+    </div>
 </div>
 
-<div class="content-container">
-    {% include 'components/language-switcher.html' %}
+<div class="content-container grid">
+    <div class="span-7-12">{% include 'partials/branding-logo.html' %}</div>
 </div>
 
-<div class="content-container">
-    {% include 'components/version-switcher.html' %}
+<div class="content-container grid">
+    <div class="span-7-12">{% include 'components/language-switcher.html' %}</div>
 </div>
 
-<div class="content-container">
-    {{ card({
-        title: "This is a featured post",
-        featured: "true",
-        teaser: "This is a short description to demo what the card component will look like in the pattern library.",
-        authorName: "Happy McPerson",
-        category: "Sponsorships",
-        readingTime: "5 min",
-        date: "02-03-2020"
-    }) }}
+<div class="content-container grid">
+    <div class="span-7-12">{% include 'components/version-switcher.html' %}</div>
 </div>
 
-<div class="content-container">
-    {{ card({
-        title: "Just a post",
-        teaser: "This is a short description to demo what the card component will look like in the pattern library.",
-        authorName: "Happy McPerson",
-        category: "Sponsorships",
-        readingTime: "5 min",
-        date: "02-03-2020"
-    }) }}
+<div class="content-container grid">
+    <div class="span-4-12">
+        {{ card({
+            title: "This is a featured post",
+            featured: "true",
+            teaser: "This is a short description to demo what the card component will look like in the pattern library.",
+            authorName: "Happy McPerson",
+            category: "Sponsorships",
+            readingTime: "5 min",
+            date: "02-03-2020"
+        }) }}
+    </div>
+</div>
+
+<div class="content-container grid">
+    <div class="span-7-12">
+        {{ card({
+            title: "Just a post",
+            teaser: "This is a short description to demo what the card component will look like in the pattern library.",
+            authorName: "Happy McPerson",
+            category: "Sponsorships",
+            readingTime: "5 min",
+            date: "02-03-2020"
+        }) }}
+    </div>
 </div>
