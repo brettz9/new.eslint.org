@@ -104,6 +104,10 @@
 
     <link rel="stylesheet" type="text/css" href="{{ '/assets/css/styles.css' | url }}">
     <link rel="stylesheet" href="{{ '/assets/css/print.css' | url }}" media="print">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@docsearch/css@alpha"
+/>
 </head>
 
 <body class="{{ hook }} docs">
@@ -116,5 +120,14 @@
     <script src="{{ '/assets/js/docs-main.js' | url }}"></script>
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>
+<script>
+docsearch({
+  container: '#docsearch',
+  appId: 'R2IYF7ETH7',
+  apiKey: '599cec31baffa4868cae4e79f180729b',
+  indexName: 'docsearch'
+});
+</script>
 
 </html>
